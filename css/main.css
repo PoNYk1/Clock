@@ -1,9 +1,106 @@
 * {
-  transform: .3s;
+  transition: .3s;
   box-sizing: border-box;
+  font-family: 'Muli', sans-serif;
 }
 
 html, body {
   width: 100%;
   height: 100%;
+}
+
+menu {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  z-index: 99;
+}
+
+.styleSwitch {
+  position: absolute;
+  width: 50px;
+  height: 20px;
+  background: rgba(255, 255, 255, 0.2);
+  cursor: pointer;
+}
+
+.reloadButton {
+  position: absolute;
+  left: 100px;
+  width: 30px;
+  height: 20px;
+  background: rgba(255, 0, 0, 0.3);
+  cursor: pointer;
+}
+.reloadButton:hover {
+  background: rgba(255, 0, 0, 0.5);
+}
+.reloadButton:hover::before {
+  opacity: .8;
+  left: 40px;
+}
+.reloadButton:before {
+  content: "Reload...";
+  position: absolute;
+  left: 20px;
+  top: 5px;
+  opacity: 0;
+  color: #000;
+  transition: .3s;
+}
+
+.styleSwitch_block {
+  position: absolute;
+  left: 0;
+  height: 100%;
+  width: 25px;
+  background: #e9e9e9;
+}
+
+.line {
+  width: 100%;
+  min-width: 500px;
+  height: 1px;
+  position: absolute;
+  top: 49.2%;
+  display: flex;
+  justify-content: space-between;
+}
+.line div {
+  background: #FFF;
+  width: 27%;
+  height: 1px;
+}
+
+.mainBlock {
+  width: 100%;
+  min-width: 600px;
+  height: 100%;
+  min-height: 600px;
+  background: #454545;
+  position: relative;
+}
+
+.hour, .minutes, .seconds {
+  float: left;
+  margin: 10px;
+  color: #FFF;
+  font-size: 34px;
+}
+
+.clock {
+  width: 300px;
+  position: absolute;
+  left: calc(50% - 150px);
+  top: 46.3%;
+}
+
+.allTime {
+  float: left;
+  margin: 0;
+}
+.allTime p {
+  width: 40px;
+  height: 40px;
+  margin: 0px;
 }
